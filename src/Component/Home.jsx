@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import { useDispatch } from "react-redux";
-import { addCartData } from "../redux/Slice";
+import { addCartData } from "../Redux/Slice";
 import Webservice from "../Service/Webservice";
 import WebAPI from "../Service/WebAPI";
 
