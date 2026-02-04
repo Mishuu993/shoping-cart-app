@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 import { useDispatch } from "react-redux";
 import { addCartData } from "../Redux/Slice";
-import Webservice from "../Service/Webservice";
+import WebService from "../Service/WebService";
 import WebAPI from "../Service/WebAPI";
 
 
@@ -16,7 +16,7 @@ function Home()
     },[])
 
     var loadProducts = async ()=>{
-        var resp = await Webservice.getAPICall(WebAPI.productAPI);
+        var resp = await WebService.getAPICall(WebAPI.productAPI);
         console.log("Data is : "+resp);
         console.log("String Data is : "+JSON.stringify(resp))
         setProductData(resp.data.products);
